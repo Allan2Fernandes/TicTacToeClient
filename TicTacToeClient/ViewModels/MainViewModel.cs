@@ -15,7 +15,7 @@ public partial class MainViewModel : BaseViewModel
     public MainViewModel() 
     {
         ConnectionHandler = ConnectionHandler.getConnection();
-        resetBoardMethod();
+        ResetGameStatesMethod();
         
     }
 
@@ -51,14 +51,14 @@ public partial class MainViewModel : BaseViewModel
     }
 
     [RelayCommand]
-    private async Task ResetBoard()
+    private async Task ResetGameStates()
     {
-        resetBoardMethod();
+        ResetGameStatesMethod();
         //Update the server with the reset board
         await ConnectionHandler.sendMessage(ConvertGameStatesToString());
     }
 
-    private void resetBoardMethod()
+    private void ResetGameStatesMethod()
     {
         for (int i = 0; i < 3; i++)
         {
