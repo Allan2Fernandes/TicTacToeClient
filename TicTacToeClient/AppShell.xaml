@@ -7,14 +7,14 @@
 	xmlns:local="clr-namespace:TicTacToeClient">
 
 	<TabBar>
-		<ShellContent
-			Title="Main"
+        <ShellContent
+            Title="EnterName"
+            Icon="iconblank.png"
+            ContentTemplate="{DataTemplate views:EnterNamePage}"/>
+        <ShellContent
+			Title="Game"
 			Icon="iconblank.png"
 			ContentTemplate="{DataTemplate views:MainPage}" />
-		<ShellContent
-			Title="Blank"
-			Icon="iconblank.png"
-			ContentTemplate="{DataTemplate views:BlankPage}" />
         <ShellContent
             Title="HighScores"
             Icon="iconblank.png"

@@ -4,8 +4,20 @@
         <name>TicTacToeClient</name>
     </assembly>
     <members>
+        <member name="P:TicTacToeClient.ViewModels.HighScoresViewModel.MyWinsLabelString">
+            <inheritdoc cref="F:TicTacToeClient.ViewModels.HighScoresViewModel.myWinsLabelString"/>
+        </member>
+        <member name="P:TicTacToeClient.ViewModels.HighScoresViewModel.OpponentWinsLabelString">
+            <inheritdoc cref="F:TicTacToeClient.ViewModels.HighScoresViewModel.opponentWinsLabelString"/>
+        </member>
         <member name="P:TicTacToeClient.ViewModels.MainViewModel.GameStates">
             <inheritdoc cref="F:TicTacToeClient.ViewModels.MainViewModel.gameStates"/>
+        </member>
+        <member name="P:TicTacToeClient.ViewModels.MainViewModel.MyWinsLabel">
+            <inheritdoc cref="F:TicTacToeClient.ViewModels.MainViewModel.myWinsLabel"/>
+        </member>
+        <member name="P:TicTacToeClient.ViewModels.MainViewModel.OpponentWinsLabel">
+            <inheritdoc cref="F:TicTacToeClient.ViewModels.MainViewModel.opponentWinsLabel"/>
         </member>
         <member name="F:TicTacToeClient.ViewModels.MainViewModel.updateServerCommand">
             <summary>The backing field for <see cref="P:TicTacToeClient.ViewModels.MainViewModel.UpdateServerCommand"/>.</summary>

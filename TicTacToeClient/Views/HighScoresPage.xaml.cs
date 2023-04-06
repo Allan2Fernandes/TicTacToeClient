@@ -1,3 +1,5 @@
+using TicTacToeClient.Models;
+
 namespace TicTacToeClient.Views;
 
 public partial class HighScoresPage : ContentPage

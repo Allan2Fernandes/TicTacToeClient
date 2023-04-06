@@ -34,11 +34,11 @@ build_metadata.AdditionalFiles.ManifestResourceName = TicTacToeClient.Resources.
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
 
-[C:/Users/allan/source/repos/TicTacToeClient/TicTacToeClient/Views/BlankPage.xaml]
+[C:/Users/allan/source/repos/TicTacToeClient/TicTacToeClient/Views/EnterNamePage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = TicTacToeClient.Views.BlankPage.xaml
-build_metadata.AdditionalFiles.TargetPath = Views\BlankPage.xaml
-build_metadata.AdditionalFiles.RelativePath = Views\BlankPage.xaml
+build_metadata.AdditionalFiles.ManifestResourceName = TicTacToeClient.Views.EnterNamePage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\EnterNamePage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\EnterNamePage.xaml
 
 [C:/Users/allan/source/repos/TicTacToeClient/TicTacToeClient/Views/HighScoresPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
