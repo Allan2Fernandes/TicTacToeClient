@@ -28,7 +28,7 @@
         
         <Button Command="{Binding UpdateServerCommand}" Grid.Row="1" Grid.Column="0" CommandParameter="00">
             <Button.Text>
-                        <Binding Path="GameStates" Mode="OneWay" Converter="{StaticResource Key=GameStatesIndexConverter}" ConverterParameter="00"></Binding>
+                        <Binding Path="GameStates" Converter="{StaticResource GameStatesIndexConverter}" ConverterParameter="00"></Binding>
             </Button.Text>
             
         </Button>
@@ -81,7 +81,7 @@
             </Button.Text>
         </Button>
 
-        <Button Command="{Binding ResetBoardCommand}" Grid.Row="4" Grid.Column="0" Text="Reset"></Button>
+        <Button Command="{Binding ResetGameStatesCommand}" Grid.Row="4" Grid.Column="0" Text="Reset"></Button>
 
     </Grid>
 

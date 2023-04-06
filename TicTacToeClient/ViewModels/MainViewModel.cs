@@ -10,35 +10,36 @@ public partial class MainViewModel : BaseViewModel
     [ObservableProperty]
     private string[,] gameStates = new string[3, 3];
 
+    bool IsPlayer1Turn;
+
 
 
     public MainViewModel() 
     {
         ConnectionHandler = ConnectionHandler.getConnection();
-        ResetGameStatesMethod();
-        
+        ResetGameStatesMethod();        
     }
 
 
 
     public string ConvertGameStatesToString()
     {
-        string BoardAsString = "";
+        string GameStatesAsString = "";
         for (int i = 0; i < 3; i++)
         {
             for (int j = 0; j < 3; j++)
             {
                 if (GameStates[i,j] == "")
                 {
-                    BoardAsString += "_";
+                    GameStatesAsString += "_";
                 }
                 else
                 {
-                    BoardAsString += GameStates[i, j];
+                    GameStatesAsString += GameStates[i, j];
                 }
             }
         }
-        return BoardAsString;
+        return GameStatesAsString;
     }
 
     [RelayCommand]
@@ -46,7 +47,19 @@ public partial class MainViewModel : BaseViewModel
     {
         int xCoord = int.Parse(parameter[0].ToString());
         int yCoord = int.Parse(parameter[1].ToString());
-        GameStates[xCoord, yCoord] = "X";
+        if (GameStates[xCoord, yCoord] != "")
+        {
+            return;
+        }
+        if (IsPlayer1Turn)
+        {
+            GameStates[xCoord, yCoord] = "X";
+        }
+        else
+        {
+            GameStates[xCoord, yCoord] = "O";
+        }
+        IsPlayer1Turn = !IsPlayer1Turn;
         await ConnectionHandler.sendMessage(ConvertGameStatesToString());
     }
 
@@ -67,6 +80,7 @@ public partial class MainViewModel : BaseViewModel
                 GameStates[i, j] = "";
             }
         }
+        IsPlayer1Turn = true;
     }
 
 
@@ -76,11 +90,11 @@ public class GameStatesIndexConverter : IValueConverter
 {
     public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
     {
-        string[,] Board = value as string[,];
+        string[,] GameStates = value as string[,];
         int xCoord = int.Parse(parameter.ToString()[0].ToString());
         int yCoord = int.Parse(parameter.ToString()[1].ToString());
-        string BoardElement = Board[xCoord, yCoord];
-        return BoardElement;
+        string SingleElement = GameStates[xCoord, yCoord];
+        return SingleElement;
     }
 
     public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)

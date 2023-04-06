@@ -13,11 +13,11 @@
         <member name="P:TicTacToeClient.ViewModels.MainViewModel.UpdateServerCommand">
             <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:TicTacToeClient.ViewModels.MainViewModel.UpdateServer(System.String)"/>.</summary>
         </member>
-        <member name="F:TicTacToeClient.ViewModels.MainViewModel.resetBoardCommand">
-            <summary>The backing field for <see cref="P:TicTacToeClient.ViewModels.MainViewModel.ResetBoardCommand"/>.</summary>
+        <member name="F:TicTacToeClient.ViewModels.MainViewModel.resetGameStatesCommand">
+            <summary>The backing field for <see cref="P:TicTacToeClient.ViewModels.MainViewModel.ResetGameStatesCommand"/>.</summary>
         </member>
-        <member name="P:TicTacToeClient.ViewModels.MainViewModel.ResetBoardCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:TicTacToeClient.ViewModels.MainViewModel.ResetBoard"/>.</summary>
+        <member name="P:TicTacToeClient.ViewModels.MainViewModel.ResetGameStatesCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:TicTacToeClient.ViewModels.MainViewModel.ResetGameStates"/>.</summary>
         </member>
     </members>
 </doc>
