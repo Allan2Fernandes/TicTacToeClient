@@ -45,7 +45,7 @@ namespace TicTacToeClient.Models
             
         }
 
-        public async void sendMessage(string message)
+        public async Task sendMessage(string message)
         {
             await connection.InvokeAsync("SendMessage", message);
         }
