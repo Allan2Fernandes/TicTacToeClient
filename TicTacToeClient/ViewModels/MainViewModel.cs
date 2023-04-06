@@ -15,14 +15,8 @@ public partial class MainViewModel : BaseViewModel
     public MainViewModel() 
     {
         ConnectionHandler = ConnectionHandler.getConnection();
-        
-        for(int i = 0; i < 3; i++)
-        {
-            for (int j = 0; j < 3; j++)
-            {
-                GameStates[i, j] = "_";
-            }
-        }
+
+        resetBoardMethod();
         
     }
 
@@ -49,12 +43,30 @@ public partial class MainViewModel : BaseViewModel
     }
 
     [RelayCommand]
-    private async Task UpdateServer(string parameter)
+    private void UpdateServer(string parameter)
     {
         int xCoord = int.Parse(parameter[0].ToString());
         int yCoord = int.Parse(parameter[1].ToString());
         GameStates[xCoord, yCoord] = "X";
         ConnectionHandler.sendMessage(ConvertGameStatesToString());
+        //return Task.CompletedTask;
+    }
+
+    [RelayCommand]
+    private void ResetBoard()
+    {
+        resetBoardMethod();
+    }
+
+    private void resetBoardMethod()
+    {
+        for (int i = 0; i < 3; i++)
+        {
+            for (int j = 0; j < 3; j++)
+            {
+                GameStates[i, j] = "";
+            }
+        }
     }
 
 

@@ -25,23 +25,63 @@
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
-        <Button Command="{Binding UpdateServerCommand}" 
-                Grid.Row="1" Grid.Column="0" 
-                CommandParameter="00">
-
+        
+        <Button Command="{Binding UpdateServerCommand}" Grid.Row="1" Grid.Column="0" CommandParameter="00">
             <Button.Text>
                         <Binding Path="GameStates" Mode="OneWay" Converter="{StaticResource Key=GameStatesIndexConverter}" ConverterParameter="00"></Binding>
             </Button.Text>
             
         </Button>
-        <Button Command="{Binding UpdateServerCommand}" Grid.Row="1" Grid.Column="1" CommandParameter="10"></Button>
-        <Button Command="{Binding UpdateServerCommand}" Grid.Row="1" Grid.Column="2" CommandParameter="20"></Button>
-        <Button Command="{Binding UpdateServerCommand}" Grid.Row="2" Grid.Column="0" CommandParameter="01"></Button>
-        <Button Command="{Binding UpdateServerCommand}" Grid.Row="2" Grid.Column="1" CommandParameter="11"></Button>
-        <Button Command="{Binding UpdateServerCommand}" Grid.Row="2" Grid.Column="2" CommandParameter="21"></Button>
-        <Button Command="{Binding UpdateServerCommand}" Grid.Row="3" Grid.Column="0" CommandParameter="02"></Button>
-        <Button Command="{Binding UpdateServerCommand}" Grid.Row="3" Grid.Column="1" CommandParameter="12"></Button>
-        <Button Command="{Binding UpdateServerCommand}" Grid.Row="3" Grid.Column="2" CommandParameter="22"></Button>
+        
+        <Button Command="{Binding UpdateServerCommand}" Grid.Row="1" Grid.Column="1" CommandParameter="10">
+            <Button.Text>
+                <Binding Path="GameStates" Mode="OneWay" Converter="{StaticResource Key=GameStatesIndexConverter}" ConverterParameter="10"></Binding>
+            </Button.Text>
+        </Button>
+        
+        <Button Command="{Binding UpdateServerCommand}" Grid.Row="1" Grid.Column="2" CommandParameter="20">
+            <Button.Text>
+                <Binding Path="GameStates" Mode="OneWay" Converter="{StaticResource Key=GameStatesIndexConverter}" ConverterParameter="20"></Binding>
+            </Button.Text>
+        </Button>
+        
+        <Button Command="{Binding UpdateServerCommand}" Grid.Row="2" Grid.Column="0" CommandParameter="01">
+            <Button.Text>
+                <Binding Path="GameStates" Mode="OneWay" Converter="{StaticResource Key=GameStatesIndexConverter}" ConverterParameter="01"></Binding>
+            </Button.Text>
+        </Button>
+        
+        <Button Command="{Binding UpdateServerCommand}" Grid.Row="2" Grid.Column="1" CommandParameter="11">
+            <Button.Text>
+                <Binding Path="GameStates" Mode="OneWay" Converter="{StaticResource Key=GameStatesIndexConverter}" ConverterParameter="11"></Binding>
+            </Button.Text>
+        </Button>
+        
+        <Button Command="{Binding UpdateServerCommand}" Grid.Row="2" Grid.Column="2" CommandParameter="21">
+            <Button.Text>
+                <Binding Path="GameStates" Mode="OneWay" Converter="{StaticResource Key=GameStatesIndexConverter}" ConverterParameter="21"></Binding>
+            </Button.Text>
+        </Button>
+        
+        <Button Command="{Binding UpdateServerCommand}" Grid.Row="3" Grid.Column="0" CommandParameter="02">
+            <Button.Text>
+                <Binding Path="GameStates" Mode="OneWay" Converter="{StaticResource Key=GameStatesIndexConverter}" ConverterParameter="02"></Binding>
+            </Button.Text>
+        </Button>
+        
+        <Button Command="{Binding UpdateServerCommand}" Grid.Row="3" Grid.Column="1" CommandParameter="12">
+            <Button.Text>
+                <Binding Path="GameStates" Mode="OneWay" Converter="{StaticResource Key=GameStatesIndexConverter}" ConverterParameter="12"></Binding>
+            </Button.Text>
+        </Button>
+        
+        <Button Command="{Binding UpdateServerCommand}" Grid.Row="3" Grid.Column="2" CommandParameter="22">
+            <Button.Text>
+                <Binding Path="GameStates" Mode="OneWay" Converter="{StaticResource Key=GameStatesIndexConverter}" ConverterParameter="22"></Binding>
+            </Button.Text>
+        </Button>
+
+        <Button Command="{Binding ResetBoardCommand}" Grid.Row="4" Grid.Column="0" Text="Reset"></Button>
 
     </Grid>
 
