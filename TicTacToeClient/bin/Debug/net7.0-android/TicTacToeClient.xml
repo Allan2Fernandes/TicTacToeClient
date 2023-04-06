@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TicTacToeClient</name>
+    </assembly>
+    <members>
+        <member name="P:TicTacToeClient.ViewModels.MainViewModel.GameStates">
+            <inheritdoc cref="F:TicTacToeClient.ViewModels.MainViewModel.gameStates"/>
+        </member>
+        <member name="F:TicTacToeClient.ViewModels.MainViewModel.updateServerCommand">
+            <summary>The backing field for <see cref="P:TicTacToeClient.ViewModels.MainViewModel.UpdateServerCommand"/>.</summary>
+        </member>
+        <member name="P:TicTacToeClient.ViewModels.MainViewModel.UpdateServerCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:TicTacToeClient.ViewModels.MainViewModel.UpdateServer(System.String)"/>.</summary>
+        </member>
+    </members>
+</doc>

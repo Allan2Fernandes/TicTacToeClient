@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+			 xmlns:vm="clr-namespace:TicTacToeClient.ViewModels"
+			 x:Class="TicTacToeClient.Views.MainPage"
+			 x:DataType="vm:MainViewModel"
+             xmlns:local="clr-namespace:TicTacToeClient.ViewModels"
+             >
+
+    <ContentPage.Resources>
+        <local:GameStatesIndexConverter x:Key="GameStatesIndexConverter"></local:GameStatesIndexConverter>
+    </ContentPage.Resources>
+
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Button Command="{Binding UpdateServerCommand}" 
+                Grid.Row="1" Grid.Column="0" 
+                CommandParameter="00">
+
+            <Button.Text>
+                        <Binding Path="GameStates" Mode="OneWay" Converter="{StaticResource Key=GameStatesIndexConverter}" ConverterParameter="00"></Binding>
+            </Button.Text>
+            
+        </Button>
+        <Button Command="{Binding UpdateServerCommand}" Grid.Row="1" Grid.Column="1" CommandParameter="10"></Button>
+        <Button Command="{Binding UpdateServerCommand}" Grid.Row="1" Grid.Column="2" CommandParameter="20"></Button>
+        <Button Command="{Binding UpdateServerCommand}" Grid.Row="2" Grid.Column="0" CommandParameter="01"></Button>
+        <Button Command="{Binding UpdateServerCommand}" Grid.Row="2" Grid.Column="1" CommandParameter="11"></Button>
+        <Button Command="{Binding UpdateServerCommand}" Grid.Row="2" Grid.Column="2" CommandParameter="21"></Button>
+        <Button Command="{Binding UpdateServerCommand}" Grid.Row="3" Grid.Column="0" CommandParameter="02"></Button>
+        <Button Command="{Binding UpdateServerCommand}" Grid.Row="3" Grid.Column="1" CommandParameter="12"></Button>
+        <Button Command="{Binding UpdateServerCommand}" Grid.Row="3" Grid.Column="2" CommandParameter="22"></Button>
+
+    </Grid>
+
+</ContentPage>
